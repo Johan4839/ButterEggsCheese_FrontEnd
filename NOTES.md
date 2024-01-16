@@ -9,5 +9,6 @@ Unit
  - Call API to start new game
      ✅ -- Succesfull request --> 200 response and gameId returned
      🙌 -- Bad request --> 404 response and gameId is '' (literal)
+     -- Assert URL that is called by axios
 
 ❔ Mike: check component test case. For us it feels natural to also assert the output. But this is, strictly speaking, not what should be done, right?
