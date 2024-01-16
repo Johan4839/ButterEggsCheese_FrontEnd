@@ -7,14 +7,29 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --coverage --passWithNoTests --verbose"
+    "test": "jest --coverage --passWithNoTests --verbose",
+    "watch": "jest --coverage --passWithNoTests --verbose --watch"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    },
+    "roots": [
+      "./tests"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
   },
   "dependencies": {
     "axios": "^1.6.5",
     "jest": "^29.7.0",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "ts-jest": "^29.1.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.1",
